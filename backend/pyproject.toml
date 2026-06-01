@@ -1,0 +1,37 @@
+[project]
+name = "pdfchat"
+version = "0.1.0"
+description = "A highly reliable, observable, and modular RAG PDF chatbot"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain>=0.1.0",
+    "langchain-core>=0.1.0",
+    "langchain-huggingface>=0.0.1",
+    "langchain-chroma>=0.1.0",
+    "langchain-text-splitters>=0.0.1",
+    "huggingface-hub>=0.20.0",
+    "chromadb>=0.4.0",
+    "pypdf>=3.0.0",
+    "python-dotenv>=1.0.0",
+    "reportlab>=4.0.0",
+    "fastapi[standard]>=0.100.0",
+    "httpx2>=0.1.0",
+]
+
+
+[dependency-groups]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+]
+
+
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+    "ignore::starlette.util.StarletteDeprecationWarning",
+]
+
